@@ -1,9 +1,4 @@
-\version "2.12.0"
-
-\paper {
-  between-system-padding = 2\mm
-  #(define page-breaking ly:minimal-breaking)
-}
+\version "2.16.0"
 
 \header {
   title = "Pictures at an Exhibition"
@@ -15,12 +10,17 @@
   sourceurl = "http://imslp.org/wiki/Image:Moussorgsky_-_Pictures_at_an_Exhibition_-_Complete_Original_Piano_Score.pdf"
   style = "Romantic"
   maintainer = "Ian Weller"
-  maintainerEmail = "ianweller@gmail.com"
+  maintainerEmail = "ian@ianweller.org"
   maintainerWeb = "http://ianweller.org/"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  copyright = "Public Domain"
 }
 
-#(set-global-staff-size 20)
+% Define this as empty when not checking against original score
+% Setting this to \break retains the original score's breaks
+mbreak = { \break }
+mpagebreak = { \pageBreak }
+%mbreak = {}
+%mpagebreak = {}
 
 \include "01-promenade.ly"
 \include "02-gnomus.ly"
@@ -30,4 +30,3 @@
 \include "06-tuileries.ly"
 \include "07-bydlo.ly"
 \include "08-promenade.ly"
-\include "09-balet-nevylupivshikhsya-ptentsov.ly"

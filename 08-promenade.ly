@@ -1,7 +1,8 @@
-\version "2.12.0"
+\version "2.16.0"
 
 hUp = \relative c''' {
   \set Score.tempoHideNote = ##t
+
   % 15/3
   \tempo "Tranquillo." 4=78
   \clef "treble"
@@ -13,6 +14,8 @@ hUp = \relative c''' {
   \ottava #0
   \time 7/4
   r2 <bes,, g>4\(^\markup{\italic{"loco"}} <a e> <d a f> << { e8 a } \\ { <cis, a>4 } >> <f d a> |
+  \mbreak
+
   % 15/4
   \time 6/4
   << { e8 a } \\ { <c, a>4 } >> <f d f,> <d bes d,> <e g, e> <bes f bes,> <a e a,>\) |
@@ -20,6 +23,8 @@ hUp = \relative c''' {
   r2 \clef "bass" <cis, cis,> <g' g,>4 |
   \time 7/4
   <e e,> <a a,> ~ <a a,>8 r \clef "treble" <a' a,>4( <bes bes,> <a a,> <g g,>8 <f f,>) |
+  \mbreak
+
   % 15/5
   \time 5/4
   <a a,>4( <bes bes,> <e, e,>) <a a,>8( <bes bes,> <e, e,>4) |
@@ -38,10 +43,12 @@ hUp = \relative c''' {
   \time 3/4
   a^\markup{\italic{"poco rit"}} r a'8 r |
   \bar "|."
+  \mpagebreak
 }
 
 hDown = \relative c'' {
   \set Score.tempoHideNote = ##t
+
   % 15/3
   \clef "treble"
   \key d \minor
@@ -51,6 +58,7 @@ hDown = \relative c'' {
   <e c> <d bes> <bes g> <d bes e,> <d bes g> <cis a>\) |
   \time 7/4
   r2 \clef "bass" <d, g,>4\( <cis a> <d f,> <cis e,> <d d,> |
+
   % 15/4
   \time 6/4
   <c c,> <bes bes,> <g g,> <c, c,> <d d,> <cis cis,>\) |
@@ -58,6 +66,7 @@ hDown = \relative c'' {
   <a a,>( <bes bes,> <e, e,> <a a,>8 <bes bes,> <e, e,>4) |
   \time 7/4
   <bes' bes,>8( <c c,> <a a,>4 <a' a,> <f f,> <e e,>8 <d d,> <a a,>4 <bes bes,>) |
+
   % 15/5
   \time 5/4
   <f f,>4( <g g,>2. <bes bes,>4) |
@@ -95,33 +104,7 @@ hDyn = {
 
   %\header { piece = "" }
 
-  \layout {
-    % define Dynamics context
-    \context {
-      \type "Engraver_group"
-      \name Dynamics
-      \alias Voice
-      \consists "Output_property_engraver"
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "New_dynamic_engraver"
-      \consists "Dynamic_align_engraver"
-      \consists "Text_engraver"
-      \consists "Skip_event_swallow_translator"
-      \consists "Axis_group_engraver"
-
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-      \override DynamicLineSpanner #'Y-offset = #0
-      \override TextScript #'font-shape = #'italic
-      \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
-    }
-    % modify PianoStaff context to accept Dynamics context
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -129,5 +112,5 @@ hDyn = {
     \new Staff = "H_pfUpper" << \hUp \hDyn >>
     \new Staff = "H_pfLower" << \hDown \hDyn >>
   >>
-  \midi { }
+  \midi {}
 }

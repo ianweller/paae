@@ -1,7 +1,8 @@
-\version "2.12.0"
+\version "2.16.0"
 
 bUp = \relative c' {
   \set Score.tempoHideNote = ##t
+
   % 3/1
   \clef "bass"
   \time 3/4
@@ -15,6 +16,8 @@ bUp = \relative c' {
   ges2. ~ | ges2. |
   \tempo "Sempre vivo." 4=223
   ces8( ees, eeses ces' bes des,) |
+  \mbreak
+
   % 3/2
   fes4 bes8( ces, ees4) |
   bes'8( ces,) d4( bes8) r |
@@ -24,25 +27,31 @@ bUp = \relative c' {
   ces,,,8( ees, d ces' bes d,) |
   ges2.\fermata ~ |
   ges2 ~ ges8 r |
+  \mbreak
+
   % 3/3
   ces8( ees, eeses ces' bes des,) |
   fes4 bes8( ces, ees4) |
-  bes'8( ces,) d4( bes8) r |
+  bes'8( bes,) d4( bes8) r |
   \clef "treble"
   <bes'' bes,>4 <bes' bes,> <bes' bes,> |
   r2.\fermata |
   \tempo 4=192
   <f bes, ges>4 <ees bes ges>2 ~ |
   <ees bes ges>4 ~ <ees bes ges>8 r r4 |
+  \mbreak
+
   % 3/4
-  <des ges, ees>4 <c ges ees> ~ <c ges ees> |
-  <aes ees ces> <ges ees ces> ~ <ges ees ces> |
-  <f bes, ges> <ees bes ges>2 ~ |
+  <des ges, ees>4 <c ges ees> ~ <c ges ees>8 r |
+  <aes ees ces>4 <ges ees ces> ~ <ges ees ces>8 r |
+  <f bes, ges>4 <ees bes ges>2 ~ |
   <ees bes ges>4 ~ <ees bes ges>8 r r4 |
-  <des ges, ees>4 <c ges ees> ~ <c ges ees> |
-  <aes ees ces> <ges ees ces> ~ <ges ees ces>8 r |
+  <des ges, ees>4 <c ges ees> ~ <c ges ees>8 r |
+  <aes ees ces>4 <ges ees ces> ~ <ges ees ces>8 r |
   r4 \acciaccatura { ces,8 } bes4 \clef "bass" \acciaccatura { ces,8 } bes4 |
   r2.\fermata |
+  \mbreak
+
   % 3/5
   \tempo 4=223
   ces'8( ees, d ces' bes d,) |
@@ -54,6 +63,8 @@ bUp = \relative c' {
   r4 \acciaccatura { ces'8 } bes4 \acciaccatura { ces,8 } bes4 |
   ces2.\fermata( |
   bes4) r r\fermata |
+  \mpagebreak
+
   % 4/1
   \time 4/4
   \tempo "Poco meno mosso, pesante." 4=99
@@ -65,6 +76,8 @@ bUp = \relative c' {
   ees,,4 <ees'' ees,> <eeses eeses,> <ges ges,> |
   <f f,> <bes, bes,> <f' f,>2 |
   <ges ges,>4( <f f,> <bes, bes,>) <f' f,> |
+  \mbreak
+
   % 4/2
   \time 3/4
   \tempo "Vivo." 4=223
@@ -80,6 +93,8 @@ bUp = \relative c' {
   <aes aes,>2 <aeses aeses,> |
   ees,,4 <f'' f,> <fes fes,> <aes aes,> |
   <aeses aeses,> <des, des,> <aeses' aeses,>2 |
+  \mbreak
+
   % 4/3
   <aes aes,>4( <aeses aeses,> <des, des,>) <aeses' aeses,> |
   \time 3/4
@@ -92,8 +107,10 @@ bUp = \relative c' {
   aes, <ees'' ees,> |
   \time 3/4
   \tempo "Vivo." 4=223
-  ces8( ees, d ces' bes d, |
+  ces8( ees, d ces' bes ees, |
   ges4) r r\fermata |
+  \mbreak
+
   % 4/4
   \time 4/4
   \tempo "Meno mosso." 4=99
@@ -105,6 +122,8 @@ bUp = \relative c' {
   <beses' beses,>2 <aes aes,>4 <d, d,> |
   \acciaccatura { <ees ees,>8 } <ees' ees,>2 <eeses eeses,> |
   <des des,> <c c,> |
+  \mpagebreak
+
   % 5/1
   <ces ces,> <bes bes,> |
   <beses beses,> <aes aes,> |
@@ -115,6 +134,8 @@ bUp = \relative c' {
   R1*3/4 |
   R1*3/4 |
   R1*3/4 |
+  \mbreak
+
   % 5/2
   R1*3/4 |
   <f' bes, ges>4 <ees bes ges>2 |
@@ -122,6 +143,8 @@ bUp = \relative c' {
   <des ges, ees>4 <c ges ees> ~ <c ges ees>8 r |
   <aes ees ces>4 <ges ees ces> ~ <ges ees ces>8 r |
   <f bes, ges>4 <ees bes ges>2 |
+  \mbreak
+
   % 5/3
   R1*3/4 |
   <des ges, ees>4 <c ges ees>4 ~ <c ges ees>8 r |
@@ -130,6 +153,8 @@ bUp = \relative c' {
   <f bes, ges>4 <ees bes ges> ~ <ees bes ges>8 r |
   R1*3/4 |
   <des ges, ees>4 <c ges ees> ~ <c ges ees>8 r |
+  \mbreak
+
   % 5/4
   R1*3/4 |
   \clef "treble"
@@ -140,6 +165,8 @@ bUp = \relative c' {
   R1*3/4
   <ees ces aes>2 <fes ees ces aes>4 ~ |
   <fes ees ces aes>2 r4\fermata |
+  \mbreak
+
   % 5/5
   r4 r ces |
   bes8^\markup{\italic{"velocissimo"}} f ges a bes ces |
@@ -148,10 +175,12 @@ bUp = \relative c' {
   bes ces a bes d ees |
   <ges bes, ees,> r r4 r\fermata |
   \bar "|."
+  \mpagebreak
 }
 
 bDown = \relative c {
   \set Score.tempoHideNote = ##t
+
   % 3/1
   \clef "bass"
   \key ees \minor
@@ -161,6 +190,7 @@ bDown = \relative c {
   ces8( ees, d ces' bes d,) |
   ges2. ~ | ges2. |
   ces8( ees, eeses ces' bes des,) |
+
   % 3/2
   fes4 bes8( ces, ees4) |
   bes'8( ces,) d4( bes8) r |
@@ -169,26 +199,29 @@ bDown = \relative c {
   ces,,8( ees, d ces' bes d,) |
   ges2.\fermata ~ |
   ges2 ~ ges8 r |
+
   % 3/3
   ces8( ees, eeses ces' bes des,) |
   fes4 bes8( ces, ees4) |
-  bes'8( ces,) d4( bes8) r |
+  bes'8( bes,) d4( bes8) r |
   bes'4 bes' \clef "treble" bes' |
   r2.\fermata |
   \clef "bass"
   \repeat volta 2 {
     \acciaccatura { ees,,,,8 } ees'4 ees2 ~ |
     ees2. |
+
     % 3/4
     a |
-    g' |
+    ges' |
     \acciaccatura { ees,,8 } ees'4 ees2 ~ |
     ees2. |
     a |
-    g' |
-    r4 \acciaccatura { c,8 } bes4 \acciaccatura { c,8 } bes4 |
+    ges' |
+    r4 \acciaccatura { ces,8 } bes4 \acciaccatura { ces,8 } bes4 |
     r2.\fermata |
   }
+
   % 3/5
   ces'8( ees, d ces' bes d,) |
   ges2 \acciaccatura { ces,8 } bes4 ~ |
@@ -199,14 +232,16 @@ bDown = \relative c {
   r4 \acciaccatura { ces'8 } bes4 \acciaccatura { ces,8 } bes4 |
   ces2.\fermata( |
   bes4) r r\fermata |
+
   % 4/1
   <ees ees,>2 <a a,> |
-  <ees ees,> <ges ges,> |
-  <ees ees,> <c' c,>4 <ces ces,> |
+  <ees ees,> <bes' bes,> |
+  <ees, ees,> <c' c,>4 <ces ces,> |
   <des des,>2 <c c,> |
   <ees, ees,>4 <c' c,> <ces ces,> <ees ees,> |
   <d d,> <ges, ges,> <d' d,>2 |
   <ees ees,>4 <eeses eeses,> <ges, ges,> <eeses' eeses,> |
+
   % 4/2
   ces8( ees, d ces' bes d,) |
   ges4 r r\fermata |
@@ -216,14 +251,16 @@ bDown = \relative c {
   <fes fes,>2 <ees ees,> |
   <ees, ees,>4 <des' des,> <c c,> <fes fes,> |
   <ees ees,> <beses beses,> <ees ees,>2 |
+
   % 4/3
   <fes fes,>4( <ees ees,> <beses beses,>) <ees ees,> |
   fes8( aes, aeses fes' ees aeses, |
   ces4) r r\fermata |
   <aes aes,>2 <d d,> |
   <aes aes,>2 <ees' ees,> |
-  ces'8( ees, d ces' bes d, |
+  ces'8( ees, d ces' bes ees, |
   ges4) r r\fermata |
+
   % 4/4
   \acciaccatura { <ees ees,>8 } <ees, ees,>4 r <ees'' ees,>2 |
   <eeses eeses,> <des des,> |
@@ -233,6 +270,7 @@ bDown = \relative c {
   <ges ges,> <f f,> |
   \acciaccatura { <ees ees,>8 } <ees, ees,>2 <fes' fes,>4 <ces' ces,> |
   <bes bes,> <ees, ees,> <beses' beses,>2 |
+
   % 5/1
   <aes aes,> <g g,>4 <des des,> |
   <c c,> <ges' ges,> <f f,>2 |
@@ -241,6 +279,7 @@ bDown = \relative c {
   ees,2.~\startTrillSpan |
   ees2 \times 4/6 { ees16\stopTrillSpan e f ges g aes } |
   a2.~\startTrillSpan |
+
   % 5/2
   a2 \times 4/6 { beses16\stopTrillSpan aes aeses ges f fes } |
   ees2.~\startTrillSpan |
@@ -248,6 +287,7 @@ bDown = \relative c {
   a2.~\startTrillSpan |
   a2 \times 4/6 { beses16\stopTrillSpan aes aeses ges f fes } |
   ees2.~\startTrillSpan |
+
   % 5/3
   ees2 \times 4/6 { ees16\stopTrillSpan e f ges g aes } |
   a2.~\startTrillSpan |
@@ -255,6 +295,7 @@ bDown = \relative c {
   ees2.~\startTrillSpan |
   ees2 \times 4/6 { ees16\stopTrillSpan e f ges g aes } |
   a2.\startTrillSpan |
+
   % 5/4
   \times 12/11 { a16\stopTrillSpan( bes b c des d ees f ges g aes) }
   a2.(\startTrillSpan |
@@ -263,6 +304,7 @@ bDown = \relative c {
   R1*3/4 |
   <ees ces aes>2 <fes ees ces aes>4 ~ |
   <fes ees ces aes>2 r4\fermata |
+
   % 5/5
   R1*3/4 |
   ges8^\markup{\italic{"con tutta forza"}} d ees ces bes d |
@@ -274,25 +316,28 @@ bDown = \relative c {
 
 bDyn = {
   \override DynamicTextSpanner #'dash-period = #-1.0
+
   % 3
   s2.\ff s\sf s s\p s s s\ff |
   s2\sf s\sf s\sf s4\sf s\sf s s2.\ff s\sf s |
   s s2\sf s\sf s\sf s4\sf s\sf s\sf s2. s4\sf s2\sf s2. |
   s4\sf s2\sf s4\sf s2\sf s4\sf s2\sf s2. s4\sf s2\sf s4\sf s2\sf s2. s |
   s s\sf s s s2\sf s\sf s\sf s2. s\sf\> s4 s\! s |
+
   % 4
   s1\mf s s s s s s |
   s2.\ff s s1\mf s s s s s |
   s s2.\ff s s1\mf s s2.\ff s |
   s1\ff s s s s s s s |
+
   % 5
   s s s s s2.\p\< s s\f |
   \dimTextDim
   s2 s4\> s2.\p s s s s |
   \dimHairpin \crescTextCresc
-  s s s s s\< s\mf |
+  s s s s s2 s4\< s2.\mf |
   \crescHairpin
-  s4 s4...\< s32\! \crescTextCresc s2.\< s s\f\endcresc s s\ff s |
+  s8 s\< s4... s32\! \crescTextCresc s2.\< s s\f\endcresc s s\ff s |
   s s s s s s |
 }
 
@@ -305,33 +350,7 @@ bDyn = {
 
   \header { piece = "No. 1 “Gnomus”" }
 
-  \layout {
-    % define Dynamics context
-    \context {
-      \type "Engraver_group"
-      \name Dynamics
-      \alias Voice
-      \consists "Output_property_engraver"
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "New_dynamic_engraver"
-      \consists "Dynamic_align_engraver"
-      \consists "Text_engraver"
-      \consists "Skip_event_swallow_translator"
-      \consists "Axis_group_engraver"
-
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-      \override DynamicLineSpanner #'Y-offset = #0
-      \override TextScript #'font-shape = #'italic
-      \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
-    }
-    % modify PianoStaff context to accept Dynamics context
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-    }
-  }
+  \layout {}
 }
 
 \score {
@@ -339,5 +358,5 @@ bDyn = {
     \new Staff = "B_pfUpper" << \bUp \bDyn >>
     \new Staff = "B_pfLower" << \bDown \bDyn >>
   >>
-  \midi { }
+  \midi {}
 }
